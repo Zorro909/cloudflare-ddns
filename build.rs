@@ -8,7 +8,7 @@ fn main() {
         &path,
         format!(
             "pub const DEFAULT_CONF_FILE: &str = {:?};",
-            std::env::var_os("DEFAULT_CONF_FILE").unwrap_or_else(|| "cloudflare.conf".into())
+            std::env::var_os("DEFAULT_CONF_FILE").unwrap_or_else(|| "cf-dynamic.conf".into())
         ),
     )
     .expect("TODO: panic message");

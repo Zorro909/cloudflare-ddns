@@ -2,8 +2,8 @@ name: Package Build
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*'
 
 jobs:
   amd64-linux-build:
@@ -41,9 +41,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{  github.ref_name }}
           generate_release_notes: true
-          prerelease: true
           files: |
             target/release/cf-dynamic
             ${{ steps.build-deb.outputs.package }}
