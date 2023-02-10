@@ -51,6 +51,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50d30906286121d95be3d479533b458f87493b30a4b5f79a607db8f5d11aa91f"
 
 [[package]]
+name = "cf-dynamic"
+version = "1.0.0"
+dependencies = [
+ "clap",
+ "prettytable-rs",
+ "reqwest",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -92,17 +103,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "783fe232adfca04f90f56201b26d79682d4cd2625e0bc7290b95123afe558ade"
 dependencies = [
  "os_str_bytes",
-]
-
-[[package]]
-name = "cloudflare_dyn_dns"
-version = "0.1.0"
-dependencies = [
- "clap",
- "prettytable-rs",
- "reqwest",
- "serde",
- "serde_json",
 ]
 
 [[package]]

@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer for cf-dynamic
+
+[Timer]
+OnUnitActiveSec=10m
+OnBootSec=10s
+
+[Install]
+WantedBy=timers.target

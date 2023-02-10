@@ -1,0 +1,7 @@
+[Unit]
+Description=test job
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/cf-dynamic update
+Environment='CONFIG_PATH=/etc/cf-dynamic/cf-dynamic.conf'

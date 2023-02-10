@@ -1,0 +1,22 @@
+meta:
+  description: Cloudflare DDNS
+  vendor: Maximilian Kling
+  maintainer: Maximilian Kling
+files:
+  "/usr/bin/cf-dynamic":
+    file: target/release/cf-dynamic
+    mode: "0755"
+    user: "root"
+  "/etc/cf-dynamic/cf-dynamic.conf":
+    file: etc/cf-dynamic.conf
+    mode: "0644"
+    user: "root"
+    keep: true
+  "/etc/cf-dynamic/domains.json":
+    file: etc/domains.json
+    mode: "0644"
+    user: "root"
+units:
+  - etc/systemd/system/cf-dynamic.service
+  - etc/systemd/system/cf-dynamic.timer
+user: root

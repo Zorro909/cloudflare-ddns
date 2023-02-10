@@ -4,10 +4,8 @@ use crate::cloudflare::{CloudflareApi, DomainRegistration};
 use crate::config::Config;
 use clap::Parser;
 use clap::Subcommand;
-use core::num::dec2flt::parse::parse_number;
 use prettytable::{format, row, Cell, Table};
 use reqwest::blocking::Client;
-use serde_json::Number;
 use std::path::PathBuf;
 use std::time::{SystemTime, UNIX_EPOCH};
 
