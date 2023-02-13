@@ -23,6 +23,7 @@ jobs:
           DEFAULT_CONF_FILE: /etc/cf-dynamic/cf-dynamic.conf
         run: cargo build --workspace -r && strip target/release/cf-dynamic
       - name: build-deb
+        id: build-deb
         uses: kentik/pkg@v1.0.0-rc8
         with:
           name: cf-dynamic
@@ -31,6 +32,7 @@ jobs:
           format: deb
           package: package.yml
       - name: build-rpm
+        id: build-rpm
         uses: kentik/pkg@v1.0.0-rc8
         with:
           name: cf-dynamic
