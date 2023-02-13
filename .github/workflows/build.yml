@@ -46,5 +46,3 @@ jobs:
             target/release/cf-dynamic
             ${{ steps.build-deb.outputs.package }}
             ${{ steps.build-rpm.outputs.package }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
